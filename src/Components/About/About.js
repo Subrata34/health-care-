@@ -9,31 +9,26 @@ import Service from '../Service/Service';
 
 
 const About = () => {
-    const [data,setData]=useState({});
-    useEffect(()=>{
-        fetch('./doctor.json')
-        .then(res=>res.json())
-        .then(data=>setData(data))
-    })
-    
+   const[use,setUse]=useState([]);
+   useEffect(()=>{
+       fetch(`./counciling.json`)
+       .then(res=>res.json())
+       .then(data=>setUse(data));
+   })
     return (
-        <div>
-            <Header></Header>
-            <Banner></Banner>
-            <h1 className="bg-primary">This is about page:</h1>
-            
-            <Row xs={1} md={3} className="g-4">
-  
-             {
-                 data.map(use=><Carts
-                 data={use}
-                 ></Carts>)
-             }
-            </Row>
-                <Service></Service>
-            
-            <Footer></Footer>
-        </div>
+       <div>
+           <Header></Header>
+           <Banner></Banner>
+           <Row xs={1} md={2} className="g-4">
+           {
+               use.map(data=><Carts
+               data={data}
+               ></Carts>)
+           }
+           </Row>
+           <Footer></Footer>
+       </div>
+       
     );
 };
 

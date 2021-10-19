@@ -18,7 +18,7 @@ const Home = () => {
             
             <Header></Header>
             <Banner></Banner>
-            
+              <h1>Our Service </h1>
            <div className="bg-success">
                <h1 className='text-dark'>Our Health Services </h1>
             <Row xs={1} md={3} className="g-4">
