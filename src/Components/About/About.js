@@ -1,34 +1,25 @@
-import React, { useEffect, useState } from 'react';
-import { Row } from 'react-bootstrap';
-
+import React from 'react';
 import Banner from '../Banner/Banner';
-import Carts from '../Carts/Carts';
 import Footer from '../Footer/Footer';
 import Header from '../Header/Header';
-import Service from '../Service/Service';
-
 
 const About = () => {
-   const[use,setUse]=useState([]);
-   useEffect(()=>{
-       fetch(`./counciling.json`)
-       .then(res=>res.json())
-       .then(data=>setUse(data));
-   })
     return (
-       <div>
-           <Header></Header>
-           <Banner></Banner>
-           <Row xs={1} md={2} className="g-4">
-           {
-               use.map(data=><Carts
-               data={data}
-               ></Carts>)
-           }
-           </Row>
-           <Footer></Footer>
-       </div>
-       
+        <div>
+            <Header></Header>
+            <Banner></Banner>
+            <div>
+                <h1>Our services in this site </h1>
+                <div className="d-flex ">
+                <img src="https://th.bing.com/th/id/OIP.3iIK6XUfBvKejZsi9Ql5JgHaFj?pid=ImgDet&rs=1" alt="" />  
+                <img src="https://th.bing.com/th/id/OIP.C7dc5R5tZ3fWOEuYosWcFAHaE8?pid=ImgDet&rs=1" alt="" />
+                <img src="https://th.bing.com/th/id/OIP.IeWOEdmEL7RSzOFhcZSn5QHaE8?pid=ImgDet&rs=1" alt="" />
+            
+              </div>
+            
+            </div>
+            <Footer></Footer>
+        </div>
     );
 };
 

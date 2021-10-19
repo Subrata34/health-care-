@@ -12,6 +12,7 @@ const Header = () => {
     return (
   
         <div  >
+          <h1 className="bg-warning">Bangladesh Health care Service </h1>
           <div className="row bg-primary">
             <div className="col-md-2">
 
@@ -29,10 +30,8 @@ const Header = () => {
                 {""}
                 <li>Service</li>
               </Link>
-              <Link to='/care'className="items-style">
-                {""}
-                <li>Care</li>
-              </Link>
+              
+              
               <Link to='/register'className="items-style">
                 {""}
                 <li>Register</li>
