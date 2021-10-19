@@ -17,8 +17,7 @@ const Banner = () => {
           alt="First slide"
         />
         <Carousel.Caption>
-          <h3>Doctor consulting care</h3>
-          <p>Health is wealth </p>
+          
         </Carousel.Caption>
       </Carousel.Item>
       <Carousel.Item>
@@ -29,8 +28,7 @@ const Banner = () => {
         />
 
         <Carousel.Caption>
-          <h3>patient Service </h3>
-          <p>Health is wealth</p>
+         
         </Carousel.Caption>
       </Carousel.Item>
       <Carousel.Item>
@@ -41,10 +39,7 @@ const Banner = () => {
         />
 
         <Carousel.Caption>
-          <h3>Patient Care Centre.</h3>
-          <p>
-            Health is Wealth.
-          </p>
+         
         </Carousel.Caption>
       </Carousel.Item>
     </Carousel>
