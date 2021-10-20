@@ -3,6 +3,8 @@ import { Link } from 'react-router-dom';
 import Header from '../Header/Header';
 import Banner from '../Banner/Banner';
 import Footer from '../Footer/Footer';
+import { getAuth, createUserWithEmailAndPassword } from "firebase/auth";
+const auth=getAuth();
 
 const Register = () => {
     const [email,setEmail]=useState('');
@@ -15,6 +17,14 @@ const Register = () => {
     }
     const handleRegistration=e=>{
         console.log(email,password);
+        if(password.length <6){
+            return;
+        }
+        createUserWithEmailAndPassword(auth,email,password)
+        .then(result=>{
+            const user=result.user;
+            console.log(user);
+        })
       e.preventDefault();
     }
 
