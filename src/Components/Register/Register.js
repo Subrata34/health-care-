@@ -9,6 +9,7 @@ const auth=getAuth();
 const Register = () => {
     const [email,setEmail]=useState('');
     const [password,setPassword]=useState('');
+    const [error,setError]=useState('')
     const handleEmailChange=e=>{
         setEmail(e.target.value);
     }
@@ -18,6 +19,7 @@ const Register = () => {
     const handleRegistration=e=>{
         console.log(email,password);
         if(password.length <6){
+            setError('password must be 6 character')
             return;
         }
         createUserWithEmailAndPassword(auth,email,password)
@@ -41,7 +43,8 @@ const Register = () => {
                <h3>Password:<input onBlur={handlePassword} type="password" /></h3>
                
                <br/>
-               <input className="bg-success" type="submit" value="Submit" />
+               <div>{error}</div>
+               <input className="bg-success" type="submit" value="Register" />
             </form>
             <Link to="/login">Already Register?</Link>
         </div>
