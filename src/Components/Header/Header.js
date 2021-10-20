@@ -11,7 +11,7 @@ const Header = () => {
   console.log(users);
     return (
   
-        <div  >
+        <div>
           <h1 className="bg-warning">Bangladesh Health care Service </h1>
           <div className="row bg-primary">
             <div className="col-md-2">
@@ -36,7 +36,7 @@ const Header = () => {
                 {""}
                 <li>Register</li>
               </Link>
-              {users?.email?
+              {users.email?
               <Button onClick={logOut} variant="light">logOut</Button>:
               <Link to='/login'className="items-style">{""}<li>Login</li>
               </Link>

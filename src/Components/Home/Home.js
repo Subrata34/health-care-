@@ -9,7 +9,7 @@ import Header from '../Header/Header';
 const Home = () => {
     const [name,setName]=useState([])
     useEffect(()=>{
-        fetch(`./counciling.json`)
+        fetch('/Counciling.json')
         .then(res=>res.json())
         .then(data=>setName(data));
     })
