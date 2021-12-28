@@ -13,6 +13,6 @@
 
 ##This webpage git hub link and live site Below:
 
-Github private repo link :https://github.com/Programming-Hero-Web-Course3/healthcare-related-website-Subrata34
+Github private repo link :https://github.com/Subrata34/health-care-
 
 Live site link           : https://health-care-d0445.web.app
